@@ -7,12 +7,12 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen bg-dashboard-bg font-sans">
+    <div className="flex min-h-screen font-sans">
       {/* Sidebar: fixed width, full height */}
       <Sidebar />
 
-      {/* Main content (dashboard area) */}
-      <div className="flex-1">{children}</div>
+      {/* Main content area */}
+      <div className="flex-1 bg-content-bg">{children}</div>
     </div>
   );
 }

@@ -20,22 +20,26 @@ const navItems = [
 
 function SidebarNav() {
   return (
-    <aside className="w-sidebar min-h-screen bg-white flex flex-col items-center justify-between py-10 px-6">
+    <aside className="w-sidebar min-h-screen bg-white flex flex-col justify-between py-10 px-6">
       {/* Top section */}
       <div className="flex flex-col gap-10 w-full">
         {/* Logo */}
-        <div className="h-6 w-[8px] bg-primary rounded-sm text-white flex items-center justify-center text-xs font-bold"></div>
+        <div className="h-6 w-[181px] bg-primary rounded-sm text-white flex items-center justify-center text-xs font-bold">
+          LOGO
+        </div>
 
         {/* Nav Links */}
-        <nav className="flex flex-col items-start p-0 gap-3 w-[232px] h-[452px]">
+        <nav className="flex flex-col gap-3 w-full">
           {navItems.map((item) => (
             <NavLink key={item.label} to={item.to} end>
               {({ isActive }) => (
                 <div
-                  className={isActive ? "p-2 bg-[#F8F8FB] rounded-[32px]" : ""}
+                  className={`${
+                    isActive ? "p-2 bg-[#F8F8FB] rounded-[32px]" : ""
+                  } w-[232px]`} // 👈 keep nav item 232px
                 >
                   <div
-                    className={`flex flex-row items-center px-4 py-[14px] gap-2 w-[232px] h-[52px] rounded-[32px] transition-colors
+                    className={`flex items-center px-4 py-[14px] gap-2 h-[52px] rounded-[32px] transition-colors
                       ${
                         isActive
                           ? "bg-white text-text-active"

@@ -1,43 +1,24 @@
-import { Bell, Search } from "lucide-react";
+// DashboardHeader.tsx
+import ProfileBlock from "./ProfileBlock";
+import NotificationButton from "./NotificationButton";
 
-export default function DashboardHeader() {
+interface DashboardHeaderProps {
+  title: string;
+}
+
+export default function DashboardHeader({ title }: DashboardHeaderProps) {
   return (
-    <div className="flex items-center justify-between py-4">
-      {/* Left: title + subtitle */}
-      <div>
-        <h1 className="text-2xl font-semibold text-text-dark">Dashboard</h1>
-        <p className="text-sm text-muted">
-          Overview of invoices and recent activities
-        </p>
+    <header className="flex items-center justify-between w-full max-w-[1080px] h-[100px] border-b border-[rgba(162,184,255,0.2)]">
+      {/* Left: Dynamic Page Title */}
+      <h1 className="text-[28px] leading-[35px] font-medium tracking-[0.12em] uppercase text-text-dark">
+        {title}
+      </h1>
+
+      {/* Right: Actions */}
+      <div className="flex items-center gap-6">
+        <NotificationButton />
+        <ProfileBlock initials="KO" />
       </div>
-
-      {/* Right: search, actions */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center bg-white/80 px-3 py-2 rounded-full shadow-sm">
-          <Search className="w-4 h-4 text-muted mr-2" />
-          <input
-            className="outline-none text-sm bg-transparent"
-            placeholder="Search invoices..."
-          />
-        </div>
-
-        <button className="px-5 py-2 rounded-full bg-primary text-white font-medium">
-          Create
-        </button>
-
-        <button
-          aria-label="Notifications"
-          className="p-2 rounded-full hover:bg-white/50"
-        >
-          <Bell className="w-5 h-5 text-muted" />
-        </button>
-
-        <img
-          src="https://i.pravatar.cc/40"
-          alt="avatar"
-          className="h-10 w-10 rounded-full border"
-        />
-      </div>
-    </div>
+    </header>
   );
 }
