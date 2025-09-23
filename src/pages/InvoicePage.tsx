@@ -2,6 +2,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import InvoiceToolbar from "../components/InvoiceToolbar";
 import InvoiceStats from "../components/InvoiceStats";
 import InvoiceActions from "../components/InvoiceActions";
+import InvoiceOverview from "../components/InvoiceOverview";
 
 export default function InvoicePage() {
   return (
@@ -16,11 +17,14 @@ export default function InvoicePage() {
         <InvoiceStats />
       </div>
 
-      {/* New Invoice Actions block */}
+      {/* Invoice Actions */}
       <div className="mt-10">
         <InvoiceActions />
-        {/* <RecentInvoices />
-        <RecentActivities /> */}
+      </div>
+
+      {/* Overview Section*/}
+      <div className="mt-6">
+        <InvoiceOverview />
       </div>
     </DashboardLayout>
   );
