@@ -1,58 +1,60 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Home, FileText, Users, Settings, HelpCircle } from "lucide-react";
+import { NavLink } from "react-router-dom";
+
+import { GetStartedIcon } from "../assets/icons/GetStartedIcon";
+import { OverviewIcon } from "../assets/icons/OveviewIcon";
+import { AccountsIcon } from "../assets/icons/AcccountsIcon";
+import { InvoiceIcon } from "../assets/icons/InvoiceIcon";
+import { HelpCenterIcon } from "../assets/icons/HelpCenterIcon";
+import { SettingsIcon } from "../assets/icons/SettingsIcon";
+import { UsersIcon } from "../assets/icons/UsersIcon";
 
 const navItems = [
-  { label: "Dashboard", icon: Home, to: "/" },
-  { label: "Invoices", icon: FileText, to: "/invoices" },
-  { label: "Accounts", icon: Users, to: "/accounts" },
-  { label: "Beneficiaries", icon: Users, to: "/beneficiaries" },
-  { label: "Help Center", icon: HelpCircle, to: "/help" },
-  { label: "Settings", icon: Settings, to: "/settings" },
+  { label: "Getting Started", icon: GetStartedIcon, to: "/getting-started" },
+  { label: "Overview", icon: OverviewIcon, to: "/" },
+  { label: "Accounts", icon: AccountsIcon, to: "/accounts" },
+  { label: "Invoice", icon: InvoiceIcon, to: "/invoice" },
+  { label: "Beneficiary Management", icon: UsersIcon, to: "/beneficiaries" },
+  { label: "Help Center", icon: HelpCenterIcon, to: "/help" },
+  { label: "Settings", icon: SettingsIcon, to: "/settings" },
 ];
 
-export default function Sidebar() {
+function SidebarNav() {
   return (
-    <aside
-      className="flex flex-col justify-between py-10 px-6 w-[280px] min-h-screen"
-      style={{
-        background: "linear-gradient(180deg, #DAF0FA 0%, #FFFCE2 100%)",
-      }}
-    >
-      {/* Top section: logo + nav */}
-      <div>
-        <div className="mb-8">
-          <div className="text-2xl font-bold text-text-dark">Youverify</div>
-        </div>
+    <aside className="w-sidebar min-h-screen bg-white flex flex-col items-center justify-between py-10 px-6">
+      {/* Top section */}
+      <div className="flex flex-col gap-10 w-full">
+        {/* Logo */}
+        <div className="h-6 w-[8px] bg-primary rounded-sm text-white flex items-center justify-center text-xs font-bold"></div>
 
-        <nav className="space-y-2">
-          {navItems.map((n) => (
-            <Link
-              key={n.label}
-              to={n.to}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-dark hover:bg-white/50"
-            >
-              <n.icon className="w-4 h-4" />
-              <span>{n.label}</span>
-            </Link>
+        {/* Nav Links */}
+        <nav className="flex flex-col items-start p-0 gap-3 w-[232px] h-[452px]">
+          {navItems.map((item) => (
+            <NavLink key={item.label} to={item.to} end>
+              {({ isActive }) => (
+                <div
+                  className={isActive ? "p-2 bg-[#F8F8FB] rounded-[32px]" : ""}
+                >
+                  <div
+                    className={`flex flex-row items-center px-4 py-[14px] gap-2 w-[232px] h-[52px] rounded-[32px] transition-colors
+                      ${
+                        isActive
+                          ? "bg-white text-text-active"
+                          : "text-text-inactive hover:bg-[#F8F8FB]"
+                      }`}
+                  >
+                    <item.icon className="w-6 h-6" />
+                    <span className="font-sans font-normal text-sm leading-[17px] tracking-[0.0057em]">
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </NavLink>
           ))}
         </nav>
-      </div>
-
-      {/* Bottom section: profile */}
-      <div className="pt-6 border-t border-white/40">
-        <div className="flex items-center gap-3">
-          <img
-            src="https://i.pravatar.cc/40"
-            alt="avatar"
-            className="h-10 w-10 rounded-full"
-          />
-          <div>
-            <div className="text-sm font-semibold">Abduljelel</div>
-            <div className="text-xs text-muted">Frontend</div>
-          </div>
-        </div>
       </div>
     </aside>
   );
 }
+
+export default SidebarNav;
