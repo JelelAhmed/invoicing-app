@@ -7,20 +7,45 @@ export default function statsRoutes() {
   router.get("/", async (_req, res) => {
     await db.read();
     const invoices = db.data!.invoices;
-    const stats = {
-      totalPaidCount: invoices.filter((i) => i.status === "PAID").length,
-      totalPaidAmount: invoices
-        .filter((i) => i.status === "PAID")
-        .reduce((s, i) => s + (Number(i.totalDue) || 0), 0),
-      totalOverdueCount: invoices.filter((i) => i.status === "OVERDUE").length,
-      totalOverdueAmount: invoices
-        .filter((i) => i.status === "OVERDUE")
-        .reduce((s, i) => s + (Number(i.totalDue) || 0), 0),
-      totalDraftCount: invoices.filter((i) => i.status === "DRAFT").length,
-      totalUnpaidCount: invoices.filter(
-        (i) => i.status === "PENDING" || i.status === "PARTIAL"
-      ).length,
+
+    // Baseline numbers for demo purposes
+    const baseStats = {
+      totalPaidCount: 1289,
+      totalPaidAmount: 4120102.76,
     };
+
+    // Helper functions
+    const sumByStatus = (status: string | string[]) =>
+      invoices
+        .filter((i) =>
+          Array.isArray(status)
+            ? status.includes(i.status || "")
+            : i.status === status
+        )
+        .reduce((s, i) => s + (Number(i.totalDue) || 0), 0);
+
+    const countByStatus = (status: string | string[]) =>
+      invoices.filter((i) =>
+        Array.isArray(status)
+          ? status.includes(i.status || "")
+          : i.status === status
+      ).length;
+
+    const stats = {
+      totalPaidCount: baseStats.totalPaidCount + countByStatus("PAID"),
+      totalPaidAmount: baseStats.totalPaidAmount + sumByStatus("PAID"),
+
+      totalOverdueCount: countByStatus("OVERDUE"),
+      totalOverdueAmount: sumByStatus("OVERDUE"),
+
+      totalDraftCount: countByStatus("DRAFT"),
+      totalDraftAmount: sumByStatus("DRAFT"),
+
+      // Group unpaid statuses together
+      totalUnpaidCount: countByStatus(["PENDING", "PARTIAL"]),
+      totalUnpaidAmount: sumByStatus(["PENDING", "PARTIAL"]),
+    };
+
     res.json(stats);
   });
 
