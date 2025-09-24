@@ -1,0 +1,112 @@
+{
+  "invoices": [
+    {
+      "id": "inv_001",
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "senderLogo": "/logos/fabulous.png",
+      "customerName": "Olaniyi Ojo Adewale",
+      "customerPhone": "+2348021234567",
+      "customerAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "customerEmail": "olaniyi@example.com",
+      "customerLogo": "/logos/customer1.png",
+      "invoiceNumber": "1023902390",
+      "issueDate": "2023-03-30",
+      "dueDate": "2023-05-19",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "id": "it_001",
+          "name": "Email Marketing",
+          "quantity": 10,
+          "price": 1500,
+          "total": 15000,
+          "description": "Email campaign management"
+        },
+        {
+          "id": "it_002",
+          "name": "Graphic design for emails",
+          "quantity": 7,
+          "price": 2750,
+          "total": 19250
+        }
+      ],
+      "subtotal": 34250,
+      "discount": 856.25,
+      "totalDue": 33393.75,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Fabulous Enterprise",
+        "accountNumber": "1023902390",
+        "achRoutingNo": "123456789",
+        "bankName": "Fabulous Bank",
+        "bankAddress": "123 Finance Street, NY"
+      },
+      "activities": [
+        {
+          "id": "act_001",
+          "type": "CREATED",
+          "user": "You",
+          "timestamp": "2023-09-20T12:20:00Z",
+          "description": "Created invoice 1023902390 / Olaniyi Ojo Adewale"
+        }
+      ]
+    },
+    {
+      "id": "inv_002",
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "John Doe",
+      "customerPhone": "+2348000000000",
+      "customerAddress": "123 Anywhere St",
+      "customerEmail": "john@example.com",
+      "invoiceNumber": "00239434",
+      "issueDate": "2022-12-08",
+      "dueDate": "2023-05-19",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "id": "it_003",
+          "name": "Video looping effect",
+          "quantity": 6,
+          "price": 110.5,
+          "total": 663
+        }
+      ],
+      "subtotal": 663,
+      "discount": 0,
+      "totalDue": 663,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "Fabulous Enterprise",
+        "accountNumber": "1023902390",
+        "achRoutingNo": "123456789",
+        "bankName": "Fabulous Bank",
+        "bankAddress": "123 Finance Street, NY"
+      },
+      "activities": []
+    }
+  ],
+  "customers": [
+    {
+      "id": "cus_001",
+      "name": "Olaniyi Ojo Adewale",
+      "phone": "+2348021234567",
+      "email": "olaniyi@example.com",
+      "address": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "logo": "/logos/customer1.png"
+    },
+    {
+      "id": "cus_002",
+      "name": "John Doe",
+      "phone": "+2348000000000",
+      "email": "john@example.com",
+      "address": "123 Anywhere St",
+      "logo": "/logos/customer2.png"
+    }
+  ]
+}
