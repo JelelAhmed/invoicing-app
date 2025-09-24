@@ -6,13 +6,12 @@ interface ActivityItemProps {
   avatar?: string;
 }
 
-export default function ActivityItem({
+export function ActivityItem({
   avatar,
   time,
   message,
   activityName,
 }: ActivityItemProps) {
-  // Split message at the first occurrence of "Created invoice "
   const splitIndex =
     message.indexOf("Created invoice ") + "Created invoice ".length;
   const prefix = message.slice(0, splitIndex);
@@ -20,45 +19,91 @@ export default function ActivityItem({
 
   return (
     <div className="flex flex-row items-start gap-4 w-[367px]">
-      {/* Avatar */}
-      <div className="relative flex justify-center items-center w-[48px] h-[48px] rounded-[30px] overflow-hidden">
-        <img src={avatar} alt="Avatar" className="w-full h-full object-cover" />
-      </div>
-
-      {/* Right Section: ActivityName + Time + Message */}
+      {avatar && (
+        <div className="relative flex justify-center items-center w-[48px] h-[48px] rounded-[30px] overflow-hidden">
+          <img
+            src={avatar}
+            alt="Avatar"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <div className="flex flex-col gap-2 w-[303px]">
-        {/* Activity Name & Time */}
         <div className="flex flex-col gap-1">
-          <span
-            className="text-[18px] font-medium leading-[22px] text-[#000000] w-[136px] h-[22px] flex items-center whitespace-nowrap"
-            style={{ flex: "none", order: 0, flexGrow: 0 }}
-          >
+          <span className="text-[18px] font-medium leading-[22px] text-[#000000]">
             {activityName}
           </span>
-          <span
-            className="text-[14px] font-normal leading-[160%] text-[#697598] w-[131px] h-[22px] whitespace-nowrap"
-            style={{
-              letterSpacing: "0.003em",
-              flex: "none",
-              order: 1,
-              flexGrow: 0,
-            }}
-          >
+          <span className="text-[14px] font-normal leading-[160%] text-[#697598]">
             {time}
+          </span>
+        </div>
+        <div className="flex flex-col items-start p-4 gap-1 w-[303px] h-[76px] bg-[#F6F8FA] rounded-[16px]">
+          <p className="text-[14px] font-normal leading-[160%] text-[#697598] w-[271px] h-[44px]">
+            {prefix}
+            <span className="font-medium">{boldPart}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface GenericActivityItemProps {
+  user: string;
+  timestamp: string;
+  description: string;
+  amount?: number;
+  avatar?: string;
+}
+
+export function GenericActivityItem({
+  user,
+  timestamp,
+  description,
+  amount,
+  avatar,
+}: GenericActivityItemProps) {
+  const slashIndex = description.indexOf("/") + 1;
+  const prefix = description.slice(0, slashIndex); // e.g., "00239434/"
+  const boldPart = description.slice(slashIndex); // e.g., "Olaniyi Ojo Adewale ..."
+
+  return (
+    <div className="relative flex flex-row items-start gap-4 w-[367px]">
+      {/* Avatar + Connector */}
+      <div className="relative flex flex-col items-center">
+        {avatar && (
+          <div className="relative flex justify-center items-center w-[48px] h-[48px] rounded-[30px] overflow-hidden z-10">
+            <img
+              src={avatar}
+              alt="Avatar"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
+        {/* Vertical line: starts just below avatar */}
+        <div className="absolute top-[60px] left-[22px] w-[1px] h-[70px] bg-[#E3E6EF] z-0"></div>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex flex-col gap-2 w-[303px]">
+        {/* Name & Timestamp */}
+        <div className="flex flex-col gap-1">
+          <span className="text-[18px] font-medium leading-[22px] text-[#000000]">
+            {user}
+          </span>
+          <span className="text-[14px] font-normal leading-[160%] text-[#697598]">
+            {timestamp}
           </span>
         </div>
 
         {/* Message Box */}
-        <div
-          className="flex flex-col items-start p-4 gap-1 w-[303px] h-[76px] bg-[#F6F8FA] rounded-[16px]"
-          style={{ flex: "none", order: 2, alignSelf: "stretch", flexGrow: 0 }}
-        >
-          <p
-            className="text-[14px] font-normal leading-[160%] text-[#697598] w-[271px] h-[44px]"
-            style={{ letterSpacing: "0.003em" }}
-          >
+        <div className="flex flex-col items-start p-4 gap-1 w-[303px] bg-[#F6F8FA] rounded-[16px]">
+          <p className="text-[14px] font-normal leading-[160%] text-[#697598]">
             {prefix}
             <span className="font-medium">{boldPart}</span>
+            {amount && (
+              <span className="font-medium"> ${amount.toLocaleString()}</span>
+            )}
           </p>
         </div>
       </div>

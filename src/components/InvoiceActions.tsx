@@ -1,7 +1,7 @@
 import { SettingsIcon } from "../assets/icons/SettingsIcon";
 import ActionCard from "./ActionCard";
 import { UsersIcon } from "../assets/icons/UsersIcon";
-import MoneyIcon from "../assets/icons/money-stack.png";
+import MoneyIcon from "../assets/icons/money-stac.png";
 
 export default function InvoiceActions() {
   return (

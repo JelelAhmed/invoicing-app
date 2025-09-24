@@ -7,6 +7,7 @@ type ButtonProps = {
   size?: "sm" | "md" | "lg";
   textColor?: string;
   className?: string;
+  onClick?: () => void;
 };
 
 export default function Button({
@@ -14,10 +15,12 @@ export default function Button({
   variant = "filled",
   size = "lg",
   textColor,
+  onClick,
   className,
 }: ButtonProps) {
   return (
     <button
+      onClick={onClick}
       className={clsx(
         "flex items-center justify-center gap-2 rounded-full uppercase font-semibold tracking-[0.02em] transition",
         {

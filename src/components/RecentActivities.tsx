@@ -1,4 +1,4 @@
-import ActivityItem from "./ActivityItem";
+import { ActivityItem } from "./ActivityItem";
 import ActivityAvatar from "../assets/icons/activityAvatar.png";
 import Button from "./ui/Button";
 
