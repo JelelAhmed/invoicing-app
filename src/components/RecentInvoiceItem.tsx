@@ -8,6 +8,8 @@ interface RecentInvoiceItemProps {
   issueDate: string;
   amount: string;
   status: InvoiceStatus;
+  onClick?: () => void;
+  className?: string;
 }
 
 export default function RecentInvoiceItem({
@@ -15,12 +17,20 @@ export default function RecentInvoiceItem({
   dueDate,
   amount,
   status,
+  onClick,
+  className,
 }: RecentInvoiceItemProps) {
   // Split invoice number if it's a long ID, e.g., "928883-3838"
   const invoiceParts = id.split("-");
 
   return (
-    <div className="flex justify-between items-center p-4 rounded-2xl bg-white hover:shadow-sm transition">
+    <div
+      className={clsx(
+        "flex justify-between items-center p-4 rounded-2xl bg-white hover:shadow-sm transition cursor-pointer",
+        className
+      )}
+      onClick={onClick} // attach click handler
+    >
       {/* === Left Section: Invoice ID === */}
       <div className="flex flex-col justify-center min-w-[111px] h-[50px]">
         <span className="text-[#373B47] text-[14px] font-medium leading-[20px]">
@@ -50,13 +60,10 @@ export default function RecentInvoiceItem({
             {
               "bg-green-100 text-green-600 border-green-300/30":
                 status === "PAID",
-
               "bg-[#FFF4F5] text-red-600 border-[rgba(255,86,99,0.2)]":
                 status === "OVERDUE",
-
               "bg-gray-100 text-gray-500 border-gray-300/30":
                 status === "DRAFT",
-
               "bg-yellow-100 text-yellow-600 border-yellow-300/30":
                 status === "UNPAID",
             }

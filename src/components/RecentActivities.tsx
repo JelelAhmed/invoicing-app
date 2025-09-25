@@ -18,7 +18,7 @@ interface BackendActivity extends Activity {
   customerName: string;
 }
 
-export default function RecentActivities({ limit = 5 }: { limit?: number }) {
+export default function RecentActivities({ limit = 4 }: { limit?: number }) {
   const [activities, setActivities] = useState<BackendActivity[]>([]);
   const [loading, setLoading] = useState(true);
 

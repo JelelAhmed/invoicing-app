@@ -1,8 +1,10 @@
 import Button from "./ui/Button";
+import InvoiceStatusPill from "./InvoiceStatusPill";
+import type { InvoiceStatus } from "../types/invoice";
 
 interface InvoiceModalHeaderProps {
   invoiceNumber: string;
-  status: string;
+  status: InvoiceStatus;
   onDownload?: () => void;
   onSend?: () => void;
   onMore?: () => void;
@@ -25,12 +27,11 @@ export default function InvoiceModalHeader({
         <p className="text-[16px] font-normal leading-[20px] text-[#697598] whitespace-nowrap">
           View the details and activity of this invoice
         </p>
+        <InvoiceStatusPill status={status} />
 
-        <div className="flex items-center px-4 py-2 gap-2 w-[135px] h-[36px] bg-[#F2FBFF] border border-[rgba(0,62,255,0.2)] rounded-[24px] mt-4">
-          <span className="text-[10px] font-medium leading-[16px] tracking-[0.06em] uppercase text-[#003EFF]">
-            {status}
-          </span>
-        </div>
+        {/* <div className="flex items-center px-4 py-2 gap-2 w-[135px] h-[36px] bg-[#F2FBFF] border border-[rgba(0,62,255,0.2)] rounded-[24px] mt-4">
+          <span className="text-[10px] font-medium leading-[16px] tracking-[0.06em] uppercase text-[#003EFF]"></span>
+        </div> */}
       </div>
 
       {/* Right side: Buttons */}

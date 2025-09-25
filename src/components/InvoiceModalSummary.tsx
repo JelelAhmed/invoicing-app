@@ -11,7 +11,7 @@ interface InvoiceModalSummaryProps {
 export default function InvoiceModalSummary({
   invoice,
 }: InvoiceModalSummaryProps) {
-  const { items, subtotal, discount, totalDue, paymentInfo } = invoice;
+  const { items, subtotal, discount, totalDue, paymentInfo, notes } = invoice;
 
   return (
     <div className="box-border flex flex-col justify-start items-start p-8 gap-6 w-[750px] h-[1199px] mx-auto bg-white border border-[#E3E6EF] rounded-[40px]">
@@ -47,7 +47,7 @@ export default function InvoiceModalSummary({
           NOTE:
         </span>
         <p className="text-black font-normal text-[14px] leading-[20px]">
-          Thank you for your patronage.
+          {notes}
         </p>
       </div>
     </div>

@@ -5,6 +5,65 @@
       "senderPhone": "+3869892713115",
       "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
       "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Wisefares",
+      "customerPhone": "0990222222",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "frantic@ai.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Destiny make vie",
+          "quantity": 9,
+          "price": 33,
+          "total": 297,
+          "id": "it_vucepofe"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_gxqenbvy"
+        }
+      ],
+      "subtotal": 297,
+      "discount": 3,
+      "totalDue": 294,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "Ross",
+        "accountNumber": "29938383",
+        "achRoutingNo": "238838343",
+        "bankName": "29292223",
+        "bankAddress": "10, Rufa Isiri Street, Aviele, Edo State"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_2c593udn",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T11:51:37.790Z",
+          "description": "Created invoice INV 2615976-7928 / Wisefares"
+        }
+      ],
+      "notes": "Thanks",
+      "id": "inv_ftvm4jl5",
+      "invoiceNumber": "INV 2615976-7928"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
       "customerName": "Lisa Caplin",
       "customerPhone": "Ritta",
       "customerAddress": "10 Mountain Road, Destina",

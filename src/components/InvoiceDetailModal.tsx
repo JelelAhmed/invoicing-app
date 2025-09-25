@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import CloseModalButton from "./CloseModalButton";
 import InvoiceModalHeader from "./InvoiceModalHeader";
-import InvoiceReminders from "./InvoiceReminders";
+import InvoiceRemindersComp from "./InvoiceReminders";
 import InvoiceContent from "./InvoiceContent";
-import type { Invoice } from "../types/invoice";
-import SenderImage from "../assets/icons/Sender-image.png";
+import type { Invoice, InvoiceReminders, Reminder } from "../types/invoice";
 
 interface InvoiceDetailModalProps {
   onClose: () => void;
+  invoice: Invoice;
 }
 
 // Reminders object
@@ -19,86 +19,9 @@ const reminders = [
   { label: "On the due date" },
 ];
 
-// Dummy invoice object
-const invoiceData: Invoice = {
-  senderName: "Fabulous Enterprise",
-  senderPhone: "+386 989 271 3115",
-  senderAddress: "1331 Hart Ridge Road 48436 Gaines, MI",
-  senderEmail: "info@fabulousenterise.co",
-  senderLogo: SenderImage,
-  customerName: "Olaniyi Ojo Adewale",
-  customerPhone: "+386 989 271 3115",
-  customerAddress: "1331 Hart Ridge Road 48436 Gaines, MI",
-  customerEmail: "olaniyi@example.com",
-  invoiceNumber: "1023902390",
-  issueDate: "March 30th, 2023",
-  dueDate: "May 19th, 2023",
-  billingCurrency: "USD ($)",
-  items: [
-    {
-      name: "Email Marketing",
-      quantity: 10,
-      price: 1500,
-      total: 15000,
-      description:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
-    },
-    {
-      name: "Video looping effect",
-      quantity: 6,
-      price: 1110500,
-      total: 6663000,
-    },
-    {
-      name: "Graphic design for emails",
-      quantity: 7,
-      price: 2750,
-      total: 19250,
-    },
-  ],
-  subtotal: 6697200,
-  discount: 167430,
-  totalDue: 6529770,
-  paymentInfo: {
-    accountName: "Fabulous Enterprise",
-    accountNumber: "1023902390",
-    achRoutingNo: "123456789",
-    bankName: "Fabulous Bank",
-    bankAddress: "123 Finance Street, NY",
-  },
-  activities: [
-    {
-      type: "Created invoice",
-      user: "You",
-      timestamp: "Today, 12:20 PM",
-      description: "Created invoice 00239434/Olaniyi Ojo Adewale",
-    },
-    {
-      type: "Sent invoice",
-      user: "You",
-      timestamp: "Today, 12:20 PM",
-      description:
-        "Sent invoice 00239434/Olaniyi Ojo Adewale to Olaniyi Ojo Adewale",
-    },
-    {
-      type: "Payment Confirmed",
-      user: "You",
-      timestamp: "Today, 12:20 PM",
-      description: "Manually confirmed a partial payment of $503,000.00",
-      amount: 503000,
-    },
-    {
-      type: "Payment Confirmed",
-      user: "You",
-      timestamp: "Today, 12:20 PM",
-      description: "Manually confirmed a full payment of $6,000,000.00",
-      amount: 6000000,
-    },
-  ],
-};
-
 export default function InvoiceDetailModal({
   onClose,
+  invoice,
 }: InvoiceDetailModalProps) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -106,6 +29,14 @@ export default function InvoiceDetailModal({
       document.body.style.overflow = "auto";
     };
   }, []);
+
+  const formatReminders = (reminders?: InvoiceReminders): Reminder[] => [
+    { label: "14 days before due date", active: reminders?.["14days"] },
+    { label: "7 days before due date", active: reminders?.["7days"] },
+    { label: "3 days before due date", active: reminders?.["3days"] },
+    { label: "24 hrs before due date", active: reminders?.["24hrs"] },
+    { label: "On the due date", active: reminders?.["dueDate"] },
+  ];
 
   return (
     <div className="fixed inset-0 bg-black/30 flex justify-center items-start z-50 overflow-auto">
@@ -117,8 +48,8 @@ export default function InvoiceDetailModal({
         <div className="w-[1334px] max-h-[90vh] bg-white rounded-xl p-10 flex flex-col gap-8 overflow-y-auto scrollable">
           {/* Modal Header */}
           <InvoiceModalHeader
-            invoiceNumber={invoiceData.invoiceNumber}
-            status="PARTIAL PAYMENT"
+            invoiceNumber={invoice.invoiceNumber}
+            status={invoice.status}
             onDownload={() => console.log("Download PDF")}
             onSend={() => console.log("Send invoice")}
             onMore={() => console.log("More actions")}
@@ -126,12 +57,14 @@ export default function InvoiceDetailModal({
 
           {/* Reminders */}
           <div className="mt-[40px]">
-            <InvoiceReminders reminders={reminders} />
+            <InvoiceRemindersComp
+              reminders={formatReminders(invoice.reminders)}
+            />
           </div>
 
           {/* Modal Body */}
           <div className="mt-[40px]">
-            <InvoiceContent invoice={invoiceData} />
+            <InvoiceContent invoice={invoice} />
           </div>
         </div>
       </div>

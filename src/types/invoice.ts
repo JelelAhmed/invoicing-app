@@ -25,6 +25,20 @@ export interface Activity {
   amount?: number;
 }
 
+// Reminder object for the modal/component
+export interface Reminder {
+  label: string;
+  active?: boolean;
+}
+
+export interface InvoiceReminders {
+  "14days": boolean;
+  "7days": boolean;
+  "3days": boolean;
+  "24hrs": boolean;
+  dueDate: boolean;
+}
+
 export interface Invoice {
   senderName: string;
   senderPhone: string;
@@ -47,7 +61,9 @@ export interface Invoice {
   status: InvoiceStatus;
   paymentInfo: PaymentInfo;
   activities: Activity[];
+  notes?: string;
   group?: string; // for RecentInvoice grouping
+  reminders?: InvoiceReminders;
 }
 
 export interface BackendInvoice {
