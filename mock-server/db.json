@@ -5,6 +5,266 @@
       "senderPhone": "+3869892713115",
       "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
       "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Destiny Edeki",
+      "customerPhone": "099300",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Caricature",
+          "quantity": 221,
+          "price": 99,
+          "total": 21879,
+          "id": "it_z49hyuq5"
+        }
+      ],
+      "subtotal": 21879,
+      "discount": 3,
+      "totalDue": 21876,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "12838483",
+        "accountNumber": "23993832",
+        "achRoutingNo": "393933",
+        "bankName": "Serendipity",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_c9wzj0no",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T13:02:36.726Z",
+          "description": "Created invoice INV 3872662-3667 / Destiny Edeki"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_he1edig6",
+      "invoiceNumber": "INV 3872662-3667"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Destiny Edeki",
+      "customerPhone": "099300",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Caricature",
+          "quantity": 2,
+          "price": 99,
+          "total": 198,
+          "id": "it_umvqrkff"
+        }
+      ],
+      "subtotal": 198,
+      "discount": 3,
+      "totalDue": 195,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "12838483",
+        "accountNumber": "23993832",
+        "achRoutingNo": "393933",
+        "bankName": "Serendipity",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_frrgz4fi",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T13:02:22.807Z",
+          "description": "Created invoice INV 4121909-5497 / Destiny Edeki"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_w70qxctm",
+      "invoiceNumber": "INV 4121909-5497"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Destiny Edeki",
+      "customerPhone": "099300",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Caricature",
+          "quantity": 2,
+          "price": 190,
+          "total": 380,
+          "id": "it_q82zeprg"
+        }
+      ],
+      "subtotal": 380,
+      "discount": 3,
+      "totalDue": 377,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "12838483",
+        "accountNumber": "23993832",
+        "achRoutingNo": "393933",
+        "bankName": "Serendipity",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_plffn0yf",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T13:02:08.494Z",
+          "description": "Created invoice INV 1395600-4820 / Destiny Edeki"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_rbqloshq",
+      "invoiceNumber": "INV 1395600-4820"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Destiny Edeki",
+      "customerPhone": "099300",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Caricature",
+          "quantity": 2,
+          "price": 40,
+          "total": 80,
+          "id": "it_u39h53uo"
+        }
+      ],
+      "subtotal": 80,
+      "discount": 3,
+      "totalDue": 77,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "12838483",
+        "accountNumber": "23993832",
+        "achRoutingNo": "393933",
+        "bankName": "Serendipity",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_3fq9jkp9",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T13:01:43.213Z",
+          "description": "Created invoice INV 8701434-9531 / Destiny Edeki"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_mrj18ghr",
+      "invoiceNumber": "INV 8701434-9531"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Destiny",
+      "customerPhone": "099300303",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Caricature",
+          "quantity": 2,
+          "price": 40,
+          "total": 80,
+          "id": "it_a9zoy0vl"
+        }
+      ],
+      "subtotal": 80,
+      "discount": 3,
+      "totalDue": 77,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "12838483",
+        "accountNumber": "23993832",
+        "achRoutingNo": "393933",
+        "bankName": "Serendipity",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_vtn0f084",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T13:01:20.131Z",
+          "description": "Created invoice INV 2263842-4976 / Destiny"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_omrxf8zn",
+      "invoiceNumber": "INV 2263842-4976"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
       "customerName": "Wisefares",
       "customerPhone": "0990222222",
       "customerAddress": "10 Mountain Road",
