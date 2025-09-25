@@ -48,7 +48,7 @@ export default function InvoiceStats() {
       label: "Total Unpaid",
       count: stats.totalUnpaidCount,
       amount: stats.totalUnpaidAmount,
-      status: "PARTIAL" as const, // we can pick PARTIAL to match color, backend decides actual status
+      status: "PARTIAL" as const,
     },
   ];
 

@@ -1,58 +1,57 @@
+import { useEffect, useState } from "react";
 import Button from "./ui/Button";
+import type { InvoiceStatus } from "../types/invoice";
 import RecentInvoiceItem from "./RecentInvoiceItem";
-import type { InvoiceStatus } from "./RecentInvoiceItem";
 import RecentInvoiceDateGroup from "./RecentInvoiceDateGroup";
+import { formatDate } from "../utils/formatDate";
+import { getDateGroup } from "../utils/getDateGroup";
+
+interface BackendInvoice {
+  id: string;
+  invoiceNumber: string;
+  customerName: string;
+  dueDate: string;
+  issueDate: string;
+  totalDue: number;
+  status: InvoiceStatus;
+}
 
 interface Invoice {
   id: string;
   customer: string;
   dueDate: string;
   issueDate: string;
-  amount: string;
   status: InvoiceStatus;
-  group: string; // Added grouping field
+  amount: string; // formatted for UI
+  group: string; // grouped by date label
 }
 
-const sampleInvoices: Invoice[] = [
-  {
-    id: "1023494-2304",
-    customer: "Olaniyi Ojo Adewale",
-    dueDate: "May 19th, 2023",
-    issueDate: "March 30th, 2023",
-    amount: "$1,311,750.12",
-    status: "PAID",
-    group: "8th December, 2022",
-  },
-  {
-    id: "00239434",
-    customer: "Olaniyi Ojo Adewale",
-    dueDate: "8th December, 2022",
-    issueDate: "March 30th, 2023",
-    amount: "$5,200.00",
-    status: "OVERDUE",
-    group: "Today",
-  },
-  {
-    id: "00239435",
-    customer: "Olaniyi Ojo Adewale",
-    dueDate: "May 19th, 2023",
-    issueDate: "March 30th, 2023",
-    amount: "$750.00",
-    status: "DRAFT",
-    group: "Yesterday",
-  },
-  {
-    id: "00239436",
-    customer: "Olaniyi Ojo Adewale",
-    dueDate: "May 19th, 2023",
-    issueDate: "March 30th, 2023",
-    amount: "$2,000.00",
-    status: "PENDING",
-    group: "Yesterday",
-  },
-];
 export default function RecentInvoices() {
-  const groupedInvoices = sampleInvoices.reduce((acc, invoice) => {
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/invoices")
+      .then((res) => res.json())
+      .then((data: BackendInvoice[]) => {
+        const mapped: Invoice[] = data.map((inv) => ({
+          id: inv.invoiceNumber,
+          customer: inv.customerName,
+          dueDate: formatDate(inv.dueDate),
+          issueDate: formatDate(inv.issueDate),
+          status: inv.status,
+          amount: `$${inv.totalDue.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}`,
+          group: getDateGroup(inv.dueDate),
+        }));
+        setInvoices(mapped);
+      })
+      .catch((err) => console.error("Failed to fetch invoices:", err));
+  }, []);
+
+  // Group invoices by their "group" field
+  const groupedInvoices = invoices.reduce((acc, invoice) => {
     if (!acc[invoice.group]) acc[invoice.group] = [];
     acc[invoice.group].push(invoice);
     return acc;

@@ -1,41 +1,50 @@
+import { useEffect, useState } from "react";
 import { ActivityItem } from "./ActivityItem";
 import ActivityAvatar from "../assets/icons/activityAvatar.png";
 import Button from "./ui/Button";
+import type { Invoice, Activity } from "../types/invoice";
+import { formatTimestamp } from "../utils/formatTimestamp";
+import { mapActivityType } from "../utils/mapActivityType";
+
+// Extend Activity with invoice info
+interface BackendActivity extends Activity {
+  invoiceNumber: string;
+  customerName: string;
+}
 
 export default function RecentActivities() {
-  const activities = [
-    {
-      id: 1,
-      userName: "Olaniyi Ojo Adewale",
-      activityName: "Invoice Creation",
-      message: "Created invoice 00239434/Olaniyi Ojo Adewale",
-      time: "Yesterday, 12:05 PM",
-    },
-    {
-      id: 2,
-      userName: "John Doe",
-      activityName: "Invoice Creation",
-      message: "Created invoice 00239434/John Doe",
-      time: "May 19th, 2023",
-    },
-    {
-      id: 1,
-      userName: "Chika Ikenna",
-      activityName: "Invoice Creation",
-      message: "Created invoice 00239434/Chika Ikenna",
-      time: "Yesterday, 12:05 PM",
-    },
-    {
-      id: 2,
-      userName: "John Musk",
-      activityName: "Invoice Creation",
-      message: "Created invoice 00239434/John Musk",
-      time: "May 19th, 2023",
-    },
-  ];
+  const [activities, setActivities] = useState<BackendActivity[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/invoices")
+      .then((res) => res.json())
+      .then((invoices: Invoice[]) => {
+        const allActivities: BackendActivity[] = invoices
+          .flatMap((inv) =>
+            (inv.activities || []).map((act) => ({
+              ...act,
+              invoiceNumber: inv.invoiceNumber,
+              customerName: inv.customerName,
+            }))
+          )
+          .sort(
+            (a, b) =>
+              new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+          );
+
+        setActivities(allActivities);
+      })
+      .catch((err) => console.error("Failed to fetch activities:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p>Loading activities...</p>;
+  if (!activities || activities.length === 0)
+    return <p>No recent activities</p>;
+
   return (
     <div className="flex flex-col items-start p-8 gap-6 w-[431px] h-full bg-white rounded-[40px]">
-      {/* Header */}
       <div className="flex justify-between items-center w-[367px] h-[60px]">
         <h2 className="text-[20px] font-semibold leading-[25px] text-[#1F1F23]">
           Recent Activities
@@ -50,15 +59,14 @@ export default function RecentActivities() {
         </Button>
       </div>
 
-      {/* Activities List */}
       <div className="flex flex-col gap-4 flex-1 overflow-auto">
         {activities.map((act) => (
           <ActivityItem
             key={act.id}
-            userName={act.userName}
-            activityName={act.activityName}
-            message={act.message}
-            time={act.time}
+            userName={act.user}
+            activityName={mapActivityType(act.type)}
+            message={act.description}
+            time={formatTimestamp(act.timestamp)}
             avatar={ActivityAvatar}
           />
         ))}

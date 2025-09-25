@@ -1,6 +1,5 @@
 import clsx from "clsx";
-
-export type InvoiceStatus = "PAID" | "OVERDUE" | "DRAFT" | "PENDING";
+import type { InvoiceStatus } from "../types/invoice";
 
 interface RecentInvoiceItemProps {
   id: string;
@@ -59,7 +58,7 @@ export default function RecentInvoiceItem({
                 status === "DRAFT",
 
               "bg-yellow-100 text-yellow-600 border-yellow-300/30":
-                status === "PENDING",
+                status === "UNPAID",
             }
           )}
         >

@@ -1,3 +1,5 @@
+export type InvoiceStatus = "PAID" | "OVERDUE" | "DRAFT" | "UNPAID";
+
 export interface InvoiceItem {
   name: string;
   quantity: number;
@@ -15,6 +17,7 @@ export interface PaymentInfo {
 }
 
 export interface Activity {
+  id: string;
   type: string;
   user: string;
   timestamp: string;
@@ -41,6 +44,8 @@ export interface Invoice {
   subtotal: number;
   discount: number;
   totalDue: number;
+  status: InvoiceStatus;
   paymentInfo: PaymentInfo;
   activities: Activity[];
+  group?: string; // for RecentInvoice grouping
 }
