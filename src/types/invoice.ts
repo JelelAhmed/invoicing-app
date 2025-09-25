@@ -57,5 +57,6 @@ export interface BackendInvoice {
   dueDate: string;
   issueDate: string;
   totalDue: number;
+  activities: Activity[];
   status: InvoiceStatus;
 }

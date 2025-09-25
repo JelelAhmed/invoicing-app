@@ -48,13 +48,16 @@ export default function invoiceRoutes(io: IOServer) {
     if (!payload.customerName || !payload.items) {
       return res
         .status(400)
-        .json({ error: "invoiceNumber, customerName and items are required" });
+        .json({ error: "customerName and items are required" });
     }
+
+    // Generate invoice number if missing
+    const invoiceNumber = payload.invoiceNumber ?? generateInvoiceNumber();
 
     const newInv: Invoice = {
       ...payload,
       id: payload.id ?? generateId("inv"),
-      invoiceNumber: payload.invoiceNumber ?? generateInvoiceNumber(),
+      invoiceNumber,
       items: (payload.items || []).map((it: any) => ({
         ...it,
         id: it.id ?? generateId("it"),
@@ -69,11 +72,20 @@ export default function invoiceRoutes(io: IOServer) {
         bankName: "",
         bankAddress: "",
       },
-      activities: payload.activities ?? [],
       status: payload.status ?? "PENDING",
+      activities:
+        payload.activities && payload.activities.length > 0
+          ? payload.activities
+          : [
+              {
+                id: generateId("act"),
+                type: "CREATED",
+                user: "System",
+                timestamp: new Date().toISOString(),
+                description: `Created invoice ${invoiceNumber} / ${payload.customerName}`,
+              },
+            ],
     };
-
-    // Simulate network latency
 
     db.data!.invoices.unshift(newInv);
     await new Promise((resolve) => setTimeout(resolve, 2000));

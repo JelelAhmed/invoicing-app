@@ -22,7 +22,7 @@ interface Invoice {
   group: string;
 }
 
-const DISPLAY_LIMIT = 4;
+const DISPLAY_LIMIT = 5;
 
 export default function RecentInvoices() {
   const [invoices, setInvoices] = useState<Invoice[]>([]);
@@ -38,11 +38,10 @@ export default function RecentInvoices() {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     })}`,
-    group: getDateGroup(inv.issueDate), // grouping by issue date
+    group: getDateGroup(inv.issueDate),
   });
 
   useEffect(() => {
-    // Initial fetch
     fetch("http://localhost:4000/invoices")
       .then((res) => res.json())
       .then((data: BackendInvoice[]) => {
@@ -58,7 +57,6 @@ export default function RecentInvoices() {
 
     onInvoiceCreated(handleNewInvoice);
 
-    // Cleanup
     return () => offInvoiceCreated(handleNewInvoice);
   }, []);
 

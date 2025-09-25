@@ -1,6 +1,5 @@
-// socket.ts
 import { io, Socket } from "socket.io-client";
-import type { BackendInvoice } from "../../types/invoice"; // raw from backend
+import type { BackendInvoice } from "../../types/invoice";
 
 let socket: Socket | null = null;
 

@@ -5,6 +5,169 @@
       "senderPhone": "+3869892713115",
       "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
       "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Lisa Caplin",
+      "customerPhone": "Ritta",
+      "customerAddress": "10 Mountain Road, Destina",
+      "customerEmail": "lisa@camplain",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-26",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Frank Castle",
+          "quantity": 8,
+          "price": 5,
+          "total": 40,
+          "id": "it_j3qxao8i"
+        },
+        {
+          "name": "Ship Building",
+          "quantity": 4,
+          "price": 7499,
+          "total": 29996,
+          "id": "it_8btn74kl"
+        }
+      ],
+      "subtotal": 30036,
+      "discount": 34,
+      "totalDue": 30002,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Rosebank",
+        "accountNumber": "099902022",
+        "achRoutingNo": "232234",
+        "bankName": "Creditor",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_8lz6ejew",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T09:43:25.227Z",
+          "description": "Created invoice INV 2404346-4993 / Lisa Caplin"
+        }
+      ],
+      "notes": "Frankly Speaking",
+      "id": "inv_1t9bntiy",
+      "invoiceNumber": "INV 2404346-4993"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Make Savior",
+      "customerPhone": "88729992",
+      "customerAddress": "ABJ",
+      "customerEmail": "savior@mark.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-29",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Power Tools",
+          "quantity": 13,
+          "price": 40,
+          "total": 520,
+          "id": "it_p0qq2cq2"
+        }
+      ],
+      "subtotal": 520,
+      "discount": 2,
+      "totalDue": 518,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "Franca",
+        "accountNumber": "292383292",
+        "achRoutingNo": "3848483",
+        "bankName": "Credi Bank",
+        "bankAddress": "10 Mountain Road, Nigeria"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_z1yynhf5",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T09:25:32.117Z",
+          "description": "Created invoice INV 7709856-1622 / Make Savior"
+        }
+      ],
+      "notes": "",
+      "id": "inv_qzvkmsmh",
+      "invoiceNumber": "INV 7709856-1622"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "House Cleaning",
+          "quantity": 1,
+          "price": 133,
+          "total": 133,
+          "id": "it_akvtey54"
+        }
+      ],
+      "subtotal": 133,
+      "discount": 2,
+      "totalDue": 131,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "RT",
+        "accountNumber": "99902922",
+        "achRoutingNo": "ITrate",
+        "bankName": "33838332",
+        "bankAddress": "10, Rufa Isiri Street, Aviele, Edo State"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_uh2igu8q",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T09:16:34.343Z",
+          "description": "Created invoice undefined / abduljelel ahmed"
+        }
+      ],
+      "notes": "Thanks",
+      "id": "inv_en4ai9q9",
+      "invoiceNumber": "INV 7262165-7049"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
       "customerName": "Soe Enterprises",
       "customerPhone": "0992002922",
       "customerAddress": "10 Mountain Road",
