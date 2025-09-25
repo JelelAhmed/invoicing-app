@@ -5,6 +5,273 @@
       "senderPhone": "+3869892713115",
       "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
       "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "Rose",
+      "customerAddress": "Frank Ocean",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-27",
+      "dueDate": "2025-09-28",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Item",
+          "quantity": 344,
+          "price": 2882,
+          "total": 991408,
+          "id": "it_sfh9wjr7"
+        }
+      ],
+      "subtotal": 991408,
+      "discount": 17,
+      "totalDue": 991391,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Jures",
+        "accountNumber": "09988833",
+        "achRoutingNo": "23938333",
+        "bankName": "Banking",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": false,
+        "3days": false,
+        "24hrs": true,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_ghx9hdfa",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T14:40:08.355Z",
+          "description": "Created invoice INV 6526104-6136 / abduljelel ahmed"
+        }
+      ],
+      "notes": "",
+      "id": "inv_47azs5lo",
+      "invoiceNumber": "INV 6526104-6136"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-26",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Itemizes",
+          "quantity": 132,
+          "price": 9393,
+          "total": 1239876,
+          "id": "it_x2srg9ff"
+        }
+      ],
+      "subtotal": 1239876,
+      "discount": 23,
+      "totalDue": 1239853,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "Bank",
+        "accountNumber": "2238383",
+        "achRoutingNo": "3837373",
+        "bankName": "Jili",
+        "bankAddress": "10, Rufa Isiri Street, Aviele, Edo State"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": true,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_owyag206",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T14:38:22.181Z",
+          "description": "Created invoice INV 8171159-2480 / abduljelel ahmed"
+        }
+      ],
+      "notes": "Note",
+      "id": "inv_w0xvoshj",
+      "invoiceNumber": "INV 8171159-2480"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-26",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Itemizes",
+          "quantity": 132,
+          "price": 9393,
+          "total": 1239876,
+          "id": "it_5yexnhqs"
+        }
+      ],
+      "subtotal": 1239876,
+      "discount": 23,
+      "totalDue": 1239853,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "Bank",
+        "accountNumber": "2238383",
+        "achRoutingNo": "3837373",
+        "bankName": "Jili",
+        "bankAddress": "10, Rufa Isiri Street, Aviele, Edo State"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": true,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_ng84gmpi",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T14:37:17.600Z",
+          "description": "Created invoice INV 3119030-6698 / abduljelel ahmed"
+        }
+      ],
+      "notes": "Note",
+      "id": "inv_ndezkdtk",
+      "invoiceNumber": "INV 3119030-6698"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-16",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Tile",
+          "quantity": 2,
+          "price": 3442,
+          "total": 6884,
+          "id": "it_jumwl9io"
+        }
+      ],
+      "subtotal": 6884,
+      "discount": 3,
+      "totalDue": 6881,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "BAnk",
+        "accountNumber": "Accounts",
+        "achRoutingNo": "888333",
+        "bankName": "Savings",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": true,
+        "3days": true,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [
+        {
+          "id": "act_7tv57gn8",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T14:35:24.487Z",
+          "description": "Created invoice INV 5694245-2312 / abduljelel ahmed"
+        }
+      ],
+      "notes": "Notes",
+      "id": "inv_9xyufjp8",
+      "invoiceNumber": "INV 5694245-2312"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-03",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "mm",
+          "quantity": 1,
+          "price": -1,
+          "total": -1,
+          "id": "it_nn5h62rj"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_b64ggw8a"
+        }
+      ],
+      "subtotal": -1,
+      "discount": 0,
+      "totalDue": -1,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "o",
+        "accountNumber": "",
+        "achRoutingNo": "",
+        "bankName": "",
+        "bankAddress": ""
+      },
+      "reminders": {
+        "14days": false,
+        "7days": true,
+        "3days": true,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [
+        {
+          "id": "act_4dykw0vy",
+          "type": "CREATED",
+          "user": "System",
+          "timestamp": "2025-09-25T14:33:21.455Z",
+          "description": "Created invoice INV 7478356-1090 / abduljelel ahmed"
+        }
+      ],
+      "notes": "",
+      "id": "inv_q2blz45w",
+      "invoiceNumber": "INV 7478356-1090"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
       "customerName": "Destiny Edeki",
       "customerPhone": "099300",
       "customerAddress": "10 Mountain Road",

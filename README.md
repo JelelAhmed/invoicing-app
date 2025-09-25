@@ -1,69 +1,73 @@
-# React + TypeScript + Vite
+Invoicing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple invoicing application built as part of a Frontend Engineer technical assessment.
+The app implements authentication, a mock backend, real-time updates, and unit/integration testing.
 
-Currently, two official plugins are available:
+📋 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+User Authentication – Signup & Login using Supabase
 
-## Expanding the ESLint configuration
+Invoices UI – Built from provided Figma design.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Mock Backend – REST API powered by Node/TypeScript.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Real-Time Data Flow – Socket.io integration for live updates.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Testing – Unit & integration tests with Jest + React Testing Library.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Error Handling – Graceful fallbacks for invalid URLs, network issues, etc.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚀 Getting Started
+Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Node.js v18+
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm or yarn
+
+Installation
+
+# Clone the repository
+
+git clone https://github.com/JelelAhmed/invoicing-app.git
+
+# Move into project directory
+
+cd invoicing-app
+
+# Install dependencies
+
+npm install
+
+Running the App
+
+1. Start the frontend
+   npm run dev
+
+Starts the Vite development server.
+
+2. Start the mock backend
+   npm run dev:server
+
+Runs the mock backend with hot reload (via nodemon).
+👉 Run this in a separate terminal window.
+
+3. Start backend without hot reload
+   npm run start:server
+
+Frontend runs at http://localhost:5173
+
+Backend runs at http://localhost:4000
+
+🛠 Tech Stack
+
+React + TypeScript + Vite – Frontend
+
+Supabase – Authentication
+
+Mock Backend – Express LowDB + TypeScript + tsx + nodemon
+
+Socket.io – Real-time communication
+
+Jest + React Testing Library – Unit & integration tests
+
+ESLint – Linting

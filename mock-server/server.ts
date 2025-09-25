@@ -4,7 +4,6 @@ import cors from "cors";
 import { Server as IOServer } from "socket.io";
 
 import invoiceRoutes from "./routes/invoices.js";
-import customerRoutes from "./routes/customers.js";
 import statsRoutes from "./routes/stats.js";
 
 const app = express();
@@ -26,7 +25,6 @@ const io = new IOServer(server, { cors: { origin: "*" } });
 
 // Mount routes
 app.use("/invoices", invoiceRoutes(io));
-app.use("/customers", customerRoutes());
 app.use("/stats", statsRoutes());
 
 // Socket connection

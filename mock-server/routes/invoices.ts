@@ -88,6 +88,8 @@ export default function invoiceRoutes(io: IOServer) {
     };
 
     db.data!.invoices.unshift(newInv);
+
+    // simulate Latency
     await new Promise((resolve) => setTimeout(resolve, 2000));
     await db.write();
     io.emit("invoice:created", newInv);

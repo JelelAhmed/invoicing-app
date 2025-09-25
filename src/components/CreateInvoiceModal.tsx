@@ -1,6 +1,5 @@
-"use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { supabase } from "../lib/supabase/supabaseClient";
 import type { Invoice, InvoiceItem, PaymentInfo } from "../types/invoice";
 import Button from "./ui/Button";
 
@@ -16,11 +15,9 @@ export default function CreateInvoiceModal({
   onSubmit,
 }: CreateInvoiceModalProps) {
   // ======== Form state ========
-  const [senderName, setSenderName] = useState("Fabulous Enterprise");
-  const [senderPhone, setSenderPhone] = useState("+3869892713115");
-  const [senderAddress, setSenderAddress] = useState(
-    "1331 Hart Ridge Road 48436 Gaines, MI"
-  );
+  const [senderName, setSenderName] = useState("");
+  const [senderPhone, setSenderPhone] = useState("");
+  const [senderAddress, setSenderAddress] = useState("");
   const [senderEmail, setSenderEmail] = useState("info@fabulousenterprise.co");
   const [customerName, setCustomerName] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
@@ -58,6 +55,24 @@ export default function CreateInvoiceModal({
   const [discount, setDiscount] = useState(0);
   const [notes, setNotes] = useState("");
   const [loading, setLoading] = useState(false);
+
+  // ======== Prefill sender with Supabase user ========
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data, error } = await supabase.auth.getUser();
+      if (error) {
+        console.error("Error fetching user:", error.message);
+        return;
+      }
+      if (data?.user) {
+        setSenderEmail(data.user.email ?? "");
+        setSenderName(data.user.user_metadata?.display_name ?? "");
+        setSenderPhone(data.user.user_metadata?.phone ?? "");
+      }
+    };
+
+    if (isOpen) fetchUser();
+  }, [isOpen]);
 
   // ======== Handlers ========
   const handleItemChange = (

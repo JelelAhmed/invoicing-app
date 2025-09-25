@@ -19,3 +19,14 @@ export function offInvoiceCreated(callback: (invoice: BackendInvoice) => void) {
   const s = getSocket();
   s.off("invoice:created", callback);
 }
+
+// --- Reminder events ---
+export function onRemindersCount(callback: (count: number) => void) {
+  const s = getSocket();
+  s.on("remindersCount", callback);
+}
+
+export function offRemindersCount(callback: (count: number) => void) {
+  const s = getSocket();
+  s.off("remindersCount", callback);
+}

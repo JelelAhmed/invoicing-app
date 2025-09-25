@@ -24,6 +24,14 @@ export type Activity = {
   amount?: number;
 };
 
+type Reminders = {
+  "14days": boolean;
+  "7days": boolean;
+  "3days": boolean;
+  "24hrs": boolean;
+  dueDate: boolean;
+};
+
 export type Invoice = {
   id?: string;
   status?: "PAID" | "DRAFT" | "OVERDUE" | "PENDING" | "PARTIAL";
@@ -43,6 +51,7 @@ export type Invoice = {
   billingCurrency: string;
   items: InvoiceItem[];
   subtotal: number;
+  reminders: Reminders;
   discount: number;
   totalDue: number;
   paymentInfo: PaymentInfo;

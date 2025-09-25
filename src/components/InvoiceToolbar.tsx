@@ -1,10 +1,6 @@
-import { useState } from "react";
 import Button from "./ui/Button";
-import InvoiceDetailModal from "./InvoiceDetailModal";
 
 export default function InvoiceToolbar() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full max-w-[1080px] mt-10 gap-4">
@@ -19,19 +15,11 @@ export default function InvoiceToolbar() {
             see what’s new
           </Button>
 
-          <Button
-            variant="filled"
-            className="flex-1 h-[56px] sm:h-[68px]"
-            onClick={() => setIsModalOpen(true)}
-          >
+          <Button variant="filled" className="flex-1 h-[56px] sm:h-[68px]">
             Create
           </Button>
         </div>
       </div>
-
-      {isModalOpen && (
-        <InvoiceDetailModal onClose={() => setIsModalOpen(false)} />
-      )}
     </>
   );
 }
