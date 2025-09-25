@@ -1,6 +1,352 @@
 {
   "invoices": [
     {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Fran Castle",
+      "customerPhone": "590558644",
+      "customerAddress": "Ross Aveneu",
+      "customerEmail": "abduljelel@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-29",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Generator",
+          "quantity": 32,
+          "price": 5,
+          "total": 160,
+          "id": "it_jyi1jx7n"
+        },
+        {
+          "name": "Legal Fees",
+          "quantity": 6,
+          "price": 522,
+          "total": 3132,
+          "id": "it_vqo33uij"
+        }
+      ],
+      "subtotal": 3292,
+      "discount": 30,
+      "totalDue": 3262,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "Manager",
+        "accountNumber": "0938373892",
+        "achRoutingNo": "09899",
+        "bankName": "F.I.T",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": true
+      },
+      "activities": [],
+      "notes": "Note",
+      "id": "inv_172wfmlg",
+      "invoiceNumber": "INV 7289-3275"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "invoiceNumber": "INV-783822",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Qalleet",
+          "quantity": 6,
+          "price": 2992,
+          "total": 17952,
+          "id": "it_cbe2jt25"
+        }
+      ],
+      "subtotal": 17952,
+      "discount": -2,
+      "totalDue": 17954,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "2882",
+        "accountNumber": "222",
+        "achRoutingNo": "22929",
+        "bankName": "2229",
+        "bankAddress": "2992"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "",
+      "id": "inv_vzm1rfn8"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "08154085965",
+      "customerAddress": "10, Rufa Isiri Street, Aviele, Edo State",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "invoiceNumber": "INV-46749",
+      "issueDate": "2025-10-13",
+      "dueDate": "2025-09-17",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Glass Cleaning",
+          "quantity": 1,
+          "price": 20,
+          "total": 20,
+          "id": "it_s0qfiudz"
+        },
+        {
+          "name": "Mechanical Repairs",
+          "quantity": 2,
+          "price": 33,
+          "total": 66,
+          "id": "it_5ivvgdv2"
+        }
+      ],
+      "subtotal": 86,
+      "discount": 23,
+      "totalDue": 63,
+      "status": "OVERDUE",
+      "paymentInfo": {
+        "accountName": "Francei",
+        "accountNumber": "8838382992",
+        "achRoutingNo": "238383",
+        "bankName": "BestBank",
+        "bankAddress": "23, Roll-Drive, Nigeria"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": true,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank you for your Patronage",
+      "id": "inv_bh4yd12y"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "0815408833",
+      "customerAddress": "10 Mountain Egle",
+      "customerEmail": "abduljel@gmail.com",
+      "invoiceNumber": "INV-93187",
+      "issueDate": "2025-09-23",
+      "dueDate": "2025-09-24",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Furniture",
+          "quantity": 5,
+          "price": 300,
+          "total": 1500,
+          "id": "it_lsheggw6"
+        },
+        {
+          "name": "Construction",
+          "quantity": 1,
+          "price": 3000,
+          "total": 3000,
+          "id": "it_owzl0wif"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_pgeiuuqh"
+        }
+      ],
+      "subtotal": 4500,
+      "discount": 90,
+      "totalDue": 4410,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "Frances",
+        "accountNumber": "9023392333",
+        "achRoutingNo": "743833",
+        "bankName": "Clement Bank",
+        "bankAddress": "10 Mountain Road"
+      },
+      "activities": [],
+      "id": "inv_ftgupjxt"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "0815408833",
+      "customerAddress": "10 Mountain Egle",
+      "customerEmail": "abduljel@gmail.com",
+      "invoiceNumber": "INV-93187",
+      "issueDate": "2025-09-23",
+      "dueDate": "2025-09-24",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Furniture",
+          "quantity": 5,
+          "price": 300,
+          "total": 1500,
+          "id": "it_pemtfj6h"
+        },
+        {
+          "name": "Construction",
+          "quantity": 1,
+          "price": 3000,
+          "total": 3000,
+          "id": "it_vdlwut8n"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_6gn1if3h"
+        }
+      ],
+      "subtotal": 4500,
+      "discount": 90,
+      "totalDue": 4410,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "Frances",
+        "accountNumber": "9023392333",
+        "achRoutingNo": "743833",
+        "bankName": "Clement Bank",
+        "bankAddress": "10 Mountain Road"
+      },
+      "activities": [],
+      "id": "inv_7cq4ysth"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "0815408833",
+      "customerAddress": "10 Mountain Egle",
+      "customerEmail": "abduljel@gmail.com",
+      "invoiceNumber": "INV-93187",
+      "issueDate": "2025-09-23",
+      "dueDate": "2025-09-24",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Furniture",
+          "quantity": 5,
+          "price": 300,
+          "total": 1500,
+          "id": "it_90fu17n8"
+        },
+        {
+          "name": "Construction",
+          "quantity": 1,
+          "price": 3000,
+          "total": 3000,
+          "id": "it_tjhxs5ks"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_xgrl52w7"
+        }
+      ],
+      "subtotal": 4500,
+      "discount": 90,
+      "totalDue": 4410,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "Frances",
+        "accountNumber": "9023392333",
+        "achRoutingNo": "743833",
+        "bankName": "Clement Bank",
+        "bankAddress": "10 Mountain Road"
+      },
+      "activities": [],
+      "id": "inv_qj2ct19t"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "abduljelel ahmed",
+      "customerPhone": "0815408833",
+      "customerAddress": "10 Mountain Egle",
+      "customerEmail": "abduljel@gmail.com",
+      "invoiceNumber": "INV-93187",
+      "issueDate": "2025-09-23",
+      "dueDate": "2025-09-24",
+      "billingCurrency": "EUR",
+      "items": [
+        {
+          "name": "Furniture",
+          "quantity": 5,
+          "price": 300,
+          "total": 1500,
+          "id": "it_507fkjo8"
+        },
+        {
+          "name": "Construction",
+          "quantity": 1,
+          "price": 3000,
+          "total": 3000,
+          "id": "it_h12t79b8"
+        },
+        {
+          "name": "",
+          "quantity": 1,
+          "price": 0,
+          "total": 0,
+          "id": "it_17j83ke9"
+        }
+      ],
+      "subtotal": 4500,
+      "discount": 90,
+      "totalDue": 4410,
+      "status": "DRAFT",
+      "paymentInfo": {
+        "accountName": "Frances",
+        "accountNumber": "9023392333",
+        "achRoutingNo": "743833",
+        "bankName": "Clement Bank",
+        "bankAddress": "10 Mountain Road"
+      },
+      "activities": [],
+      "id": "inv_em1drxoo"
+    },
+    {
       "id": "inv_001",
       "senderName": "Fabulous Enterprise",
       "senderPhone": "+3869892713115",

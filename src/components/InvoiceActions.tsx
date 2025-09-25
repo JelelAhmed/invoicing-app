@@ -1,9 +1,37 @@
+"use client";
+
+import { useState } from "react";
 import { SettingsIcon } from "../assets/icons/SettingsIcon";
 import ActionCard from "./ActionCard";
 import { UsersIcon } from "../assets/icons/UsersIcon";
 import MoneyIcon from "../assets/icons/money-stac.png";
+import CreateInvoiceModal from "./CreateInvoiceModal";
+import type { Invoice } from "../types/invoice";
 
 export default function InvoiceActions() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
+
+  const handleCreateInvoice = async (invoice: Invoice) => {
+    try {
+      const res = await fetch("http://localhost:4000/invoices", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(invoice),
+      });
+
+      if (!res.ok) throw new Error("Failed to create invoice");
+
+      const createdInvoice = await res.json();
+
+      // Add the created invoice to state
+      setInvoices((prev) => [createdInvoice, ...prev]);
+      console.log("Invoice created:", createdInvoice);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-6 w-full max-w-[1080px]">
       {/* Header with Border line */}
@@ -22,7 +50,7 @@ export default function InvoiceActions() {
           icon={MoneyIcon}
           title="Create New Invoice"
           description="Create new invoices easily"
-          onClick={() => console.log("Create New Invoice clicked")}
+          onClick={() => setIsModalOpen(true)} // Open modal
         />
 
         <ActionCard
@@ -41,6 +69,13 @@ export default function InvoiceActions() {
           onClick={() => console.log("Manage Customers clicked")}
         />
       </div>
+
+      {/* Invoice Creation Modal */}
+      <CreateInvoiceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleCreateInvoice}
+      />
     </div>
   );
 }

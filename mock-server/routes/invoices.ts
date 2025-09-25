@@ -2,6 +2,7 @@ import { Router } from "express";
 import { db, generateId } from "../db.js";
 import { Invoice, Activity } from "../types.js";
 import { Server as IOServer } from "socket.io";
+import { generateInvoiceNumber } from "../helper.js";
 
 export default function invoiceRoutes(io: IOServer) {
   const router = Router();
@@ -44,7 +45,7 @@ export default function invoiceRoutes(io: IOServer) {
     await db.read();
     const payload: Partial<Invoice> = req.body;
 
-    if (!payload.invoiceNumber || !payload.customerName || !payload.items) {
+    if (!payload.customerName || !payload.items) {
       return res
         .status(400)
         .json({ error: "invoiceNumber, customerName and items are required" });
@@ -53,7 +54,7 @@ export default function invoiceRoutes(io: IOServer) {
     const newInv: Invoice = {
       ...payload,
       id: payload.id ?? generateId("inv"),
-      invoiceNumber: payload.invoiceNumber,
+      invoiceNumber: payload.invoiceNumber ?? generateInvoiceNumber(),
       items: (payload.items || []).map((it: any) => ({
         ...it,
         id: it.id ?? generateId("it"),
@@ -72,7 +73,10 @@ export default function invoiceRoutes(io: IOServer) {
       status: payload.status ?? "PENDING",
     };
 
+    // Simulate network latency
+
     db.data!.invoices.unshift(newInv);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     await db.write();
     io.emit("invoice:created", newInv);
     res.status(201).json(newInv);

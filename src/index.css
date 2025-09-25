@@ -9,6 +9,10 @@ body,
   height: 100%;
 }
 
+.input-field {
+  @apply border border-gray-300 rounded-lg p-2;
+}
+
 /* For Webkit browsers (Chrome, Edge, Safari) */
 .scrollable::-webkit-scrollbar {
   width: 8px;
