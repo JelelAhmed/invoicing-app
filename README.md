@@ -40,19 +40,16 @@ npm install
 
 Running the App
 
-1. Start the frontend
-   npm run dev
+1. Start the frontend:
+   "npm run dev"
 
 Starts the Vite development server.
 
-2. Start the mock backend
-   npm run dev:server
+2. Start the mock backend:
+   "npm run dev:server"
 
 Runs the mock backend with hot reload (via nodemon).
 👉 Run this in a separate terminal window.
-
-3. Start backend without hot reload
-   npm run start:server
 
 Frontend runs at http://localhost:5173
 
