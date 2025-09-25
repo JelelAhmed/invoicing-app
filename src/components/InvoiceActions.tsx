@@ -10,7 +10,7 @@ import type { Invoice } from "../types/invoice";
 
 export default function InvoiceActions() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [invoices, setInvoices] = useState<Invoice[]>([]);
+  const [, setInvoices] = useState<Invoice[]>([]);
 
   const handleCreateInvoice = async (invoice: Invoice) => {
     try {

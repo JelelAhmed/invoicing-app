@@ -5,6 +5,326 @@
       "senderPhone": "+3869892713115",
       "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
       "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Soe Enterprises",
+      "customerPhone": "0992002922",
+      "customerAddress": "10 Mountain Road",
+      "customerEmail": "abduljelelahmed@gmail.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-10-15",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Fryer Locks",
+          "quantity": 5,
+          "price": 78,
+          "total": 390,
+          "id": "it_uav6u9kg"
+        },
+        {
+          "name": "Furniture",
+          "quantity": 6,
+          "price": 6,
+          "total": 36,
+          "id": "it_bofz8y8l"
+        }
+      ],
+      "subtotal": 426,
+      "discount": 30,
+      "totalDue": 396,
+      "status": "PARTIAL",
+      "paymentInfo": {
+        "accountName": "Lisboa",
+        "accountNumber": "827272722",
+        "achRoutingNo": "899393",
+        "bankName": "Castle Bank",
+        "bankAddress": "10 Mountain Road"
+      },
+      "reminders": {
+        "14days": false,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_5ky3jxhl",
+      "invoiceNumber": "INV 5437294-8696"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Messi Lionel",
+      "customerPhone": "9077322",
+      "customerAddress": "Frank Casle 40",
+      "customerEmail": "castle@mssi.com",
+      "issueDate": "2025-09-18",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Groceries",
+          "quantity": 9,
+          "price": 399,
+          "total": 3591,
+          "id": "it_3a0jkp7i"
+        },
+        {
+          "name": "Repairs",
+          "quantity": 3,
+          "price": 5,
+          "total": 15,
+          "id": "it_xqdrygda"
+        },
+        {
+          "name": "reminders",
+          "quantity": 9,
+          "price": 45,
+          "total": 405,
+          "id": "it_u1mco5t0"
+        }
+      ],
+      "subtotal": 4011,
+      "discount": 3,
+      "totalDue": 4008,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Menu Backerc",
+        "accountNumber": "0222029922",
+        "achRoutingNo": "(009099)",
+        "bankName": "F.IT",
+        "bankAddress": "10 Mountain Road, Drive"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_1fys4r1r",
+      "invoiceNumber": "INV 9849801-7354"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Messi Lionel",
+      "customerPhone": "9077322",
+      "customerAddress": "Frank Casle 40",
+      "customerEmail": "castle@mssi.com",
+      "issueDate": "2025-09-24",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Groceries",
+          "quantity": 9,
+          "price": 399,
+          "total": 3591,
+          "id": "it_wdj9r0u5"
+        },
+        {
+          "name": "Repairs",
+          "quantity": 3,
+          "price": 5,
+          "total": 15,
+          "id": "it_d4thelul"
+        },
+        {
+          "name": "reminders",
+          "quantity": 9,
+          "price": 45,
+          "total": 405,
+          "id": "it_jrelbp8b"
+        }
+      ],
+      "subtotal": 4011,
+      "discount": 3,
+      "totalDue": 4008,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Menu Backerc",
+        "accountNumber": "0222029922",
+        "achRoutingNo": "(009099)",
+        "bankName": "F.IT",
+        "bankAddress": "10 Mountain Road, Drive"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": true,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_2xqy91or",
+      "invoiceNumber": "INV 3450557-9100"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Messi Lionel",
+      "customerPhone": "9077322",
+      "customerAddress": "Frank Casle 40",
+      "customerEmail": "castle@mssi.com",
+      "issueDate": "2025-09-24",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Groceries",
+          "quantity": 9,
+          "price": 399,
+          "total": 3591,
+          "id": "it_54benjf9"
+        },
+        {
+          "name": "Repairs",
+          "quantity": 3,
+          "price": 5,
+          "total": 15,
+          "id": "it_b9t8fwdg"
+        }
+      ],
+      "subtotal": 3606,
+      "discount": 3,
+      "totalDue": 3603,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Menu Backerc",
+        "accountNumber": "0222029922",
+        "achRoutingNo": "(009099)",
+        "bankName": "F.IT",
+        "bankAddress": "10 Mountain Road, Drive"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_jiyx2kkf",
+      "invoiceNumber": "INV 3112340-2746"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Messi Lionel",
+      "customerPhone": "9077322",
+      "customerAddress": "Frank Casle 40",
+      "customerEmail": "castle@mssi.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Groceries",
+          "quantity": 9,
+          "price": 399,
+          "total": 3591,
+          "id": "it_grmc82nf"
+        },
+        {
+          "name": "Repairs",
+          "quantity": 3,
+          "price": 5,
+          "total": 15,
+          "id": "it_e2m0ei93"
+        }
+      ],
+      "subtotal": 3606,
+      "discount": 3,
+      "totalDue": 3603,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Menu Backerc",
+        "accountNumber": "0222029922",
+        "achRoutingNo": "(009099)",
+        "bankName": "F.IT",
+        "bankAddress": "10 Mountain Road, Drive"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_6dclco7c",
+      "invoiceNumber": "INV 3323169-3697"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
+      "customerName": "Messi Lionel",
+      "customerPhone": "9077322",
+      "customerAddress": "Frank Casle 40",
+      "customerEmail": "castle@mssi.com",
+      "issueDate": "2025-09-25",
+      "dueDate": "2025-09-30",
+      "billingCurrency": "USD",
+      "items": [
+        {
+          "name": "Groceries",
+          "quantity": 9,
+          "price": 399,
+          "total": 3591,
+          "id": "it_zkyrdhme"
+        },
+        {
+          "name": "Repairs",
+          "quantity": 3,
+          "price": 5,
+          "total": 15,
+          "id": "it_c5pgz6i9"
+        }
+      ],
+      "subtotal": 3606,
+      "discount": 3,
+      "totalDue": 3603,
+      "status": "PAID",
+      "paymentInfo": {
+        "accountName": "Menu Backerc",
+        "accountNumber": "0222029922",
+        "achRoutingNo": "(009099)",
+        "bankName": "F.IT",
+        "bankAddress": "10 Mountain Road, Drive"
+      },
+      "reminders": {
+        "14days": true,
+        "7days": false,
+        "3days": false,
+        "24hrs": false,
+        "dueDate": false
+      },
+      "activities": [],
+      "notes": "Thank You",
+      "id": "inv_zubuq317",
+      "invoiceNumber": "INV 3317852-5423"
+    },
+    {
+      "senderName": "Fabulous Enterprise",
+      "senderPhone": "+3869892713115",
+      "senderAddress": "1331 Hart Ridge Road 48436 Gaines, MI",
+      "senderEmail": "info@fabulousenterprise.co",
       "customerName": "Fran Castle",
       "customerPhone": "590558644",
       "customerAddress": "Ross Aveneu",

@@ -49,3 +49,13 @@ export interface Invoice {
   activities: Activity[];
   group?: string; // for RecentInvoice grouping
 }
+
+export interface BackendInvoice {
+  id: string;
+  invoiceNumber: string;
+  customerName: string;
+  dueDate: string;
+  issueDate: string;
+  totalDue: number;
+  status: InvoiceStatus;
+}
